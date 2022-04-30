@@ -40,12 +40,10 @@ registerPlugin({
 
 	let message = messages[getRandomInt(0,messages.length)].message;
 	let msg = message.replace('%n', client.name())
-	
-	if (type == 'Private chat') {
+	if (type == 0) {
 	    client.chat(msg)
 	} else {
 	    client.poke(msg)
 	}
     })
 })
-
